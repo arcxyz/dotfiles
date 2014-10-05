@@ -1,6 +1,5 @@
-dotfiles
-========
 Archlinux config files
+========
 
 Currently using:
 + bspwm: tiling window manager
