@@ -1,3 +1,4 @@
+hsetroot -tile .wallpaper.jpg &
 start-pulseaudio-x11 &
 setxkbmap es &
 sxhkd &

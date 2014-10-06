@@ -1,6 +1,6 @@
 #! /bin/sh
 
-bspc config border_width        0
+bspc config border_width        1
 bspc config window_gap          0
 
 bspc config split_ratio         0.52
@@ -17,4 +17,5 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
 $(dirname $0)/panel/panel &
-trayer --edge top --align right --margin 0 --widthtype request --height $PANEL_HEIGHT --transparent true --tint 0x66666666 --distance 110 --distancefrom right
+trayer --edge top --align right --margin 0 --widthtype request --height $PANEL_HEIGHT --transparent true --tint 0x33333333 --alpha 0 --distance 110 --distancefrom right &
+`grep '^Exec' ~/.config/autostart/*.desktop | tail -1 | sed 's/^Exec=//' | sed 's/%.//'` &
