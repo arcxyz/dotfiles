@@ -17,4 +17,4 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
 $(dirname $0)/panel/panel &
-trayer --edge top --align right --margin 0 --widthtype request --height $PANEL_HEIGHT --transparent true --tint 0x66666666 --distance 100 --distancefrom right
+trayer --edge top --align right --margin 0 --widthtype request --height $PANEL_HEIGHT --transparent true --tint 0x66666666 --distance 110 --distancefrom right
