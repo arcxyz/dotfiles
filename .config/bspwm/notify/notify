@@ -1,0 +1,6 @@
+#!/bin/sh
+source $(dirname $0)/../config
+
+baropt="-g ${notify_width}x${notify_height}+${notify_x}+${notify_y} -B ${notify_bg} -F ${notify_fg}"
+
+(echo " $@"; sleep ${notify_duration}) | bar ${baropt}
