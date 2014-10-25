@@ -1,0 +1,16 @@
+# Panel config
+panelHeight=14
+
+
+# Notifications
+notify_width=300
+notify_height=90
+
+notify_x=1060
+notify_y=20
+
+notify_bg='#FF34322E'
+notify_fg='#FFA3A6AB'
+
+notify_duration=3
+
