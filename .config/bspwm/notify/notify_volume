@@ -1,0 +1,17 @@
+#!/bin/bash
+vcontrol="pactl set-sink-volume 0 --"
+vnotify="$(dirname $0)/notify  $(pactl list sinks | perl -000ne 'if(/#$ENV{sink_index}/){/(Volume:.*)/; print     "$1\n"}' |     sed 's/.*\ \(.*\)%.*/\1/g')"
+vmute="pactl set-sink-mute 0 toggle"
+case $1 in
+  '+')
+    $vcontrol +5%;  $vnotify
+    ;;
+  '-')
+    $vcontrol -5%; $vnotify
+    ;;
+  'm')
+    $vmute && $vnotify+$(pactl list sinks | grep Mute)
+    ;;
+  *)
+    echo "no default action"
+esac
